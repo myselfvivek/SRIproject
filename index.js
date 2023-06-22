@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 
-const cookieParser = require('cookie-parser');
-app.use(cookieParser());
+// const cookieParser = require('cookie-parser');
+// app.use(cookieParser());
 
 app.use(express.json());
 
@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 4000;
 
 app.set('view engine', 'ejs');
 
-const connectdB = require('./config/database');
-connectdB();
+// const connectdB = require('./config/database');
+// connectdB();
 
 var path = require('path');
 app.use(express.static(path.join(__dirname, 'public')))
